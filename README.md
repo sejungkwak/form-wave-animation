@@ -18,3 +18,23 @@
 + Challenge from Brad Traversy & Florin Pop on Udemy '50 Projects in 50 Days'
 
 #### Takeaways from the instructor
+
+1. HTML
+- wrap the content in a container and then h1(it's not in the form), form, div, input type="text"(not email 🤔), label and button inside the form.
+
+2. CSS
+- transform only, not used animation
+- transition with cubic-bezier
+
+3. JavaScript
+- For wrapping letters in span used .split, .map and .join
+```
+const labels = document.querySelectorAll('.form-control label')
+
+labels.forEach(label => {
+    label.innerHTML = label.innerText
+        .split('')
+        .map((letter, idx) => `<span style="transition-dely: ${idx * 50}ms">${letter}</span>`)
+        .join
+})
+```
