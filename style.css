@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #ffe8e8;
+    color: #fff;
+}
+
+form {
+    text-align: center;
+    width: 350px;
+    height: 450px;
+    background-color: #ff9292;
+    border-radius: 10px;
+}
+
+.title {
+    margin: 15% auto;
+}
+
+.label {
+    display: block;
+    position: relative;
+    margin: 15% 10% 10%;
+}
+
+.label-text {
+    position: relative;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+.email span,
+.password span {
+    display: inline-block;
+    position: relative;
+    animation: animate 1000ms ease-in-out 1;
+    animation-delay: calc(100ms * var(--i));
+}
+
+@keyframes animate 
+{
+    0% 
+    {
+        transform: translateY(-30px);
+        color: #ffe8e8;
+    }
+    20% 
+    {
+        transform: translateY(-50px);
+        color: #ffe8e8;
+    }
+    40%,100%
+    {
+        transform: translateY(-30px);
+        color: #ffe8e8;
+    }
+}
+
+.input {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: inherit;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.input:focus {
+    outline: none;
+    background-color:  #ff9292;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #ffe8e8;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:focus {
+    box-shadow: 0 0 0px 30px #ff9292 inset;
+    -webkit-box-shadow: 0 0 0px 30px #ff9292 inset;
+    -webkit-text-fill-color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.btn {
+    width: 80%;
+    height: 10%;
+    margin: 10% auto 5%;
+    background-color: #ffb4b4;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register {
+    text-decoration: none;
+    color: #ffe8e8;
+}
